@@ -1,12 +1,12 @@
 <div class="card">
-  <div class="card-body">
-    <form [formGroup]="funcionarioForm">
-      <div class="col-md-6 col-md-offset-3">
-
+   <form [formGroup]="funcionarioForm">
+     <div class="form-group">
+      <img class = "logo "src="assets/images/cadastram-logo.png" alt="cadastram-logo">
+     </div>
+    <div class="form-box">
         <!-- INÍCIO BLOCO: Nome do Funcionário -->
         <div class="form-group">
-          <label>Nome</label>
-          <input type="text" class="form-control" formControlName="nomeFuncionario" #nomeFuncionario>
+          <input placeholder= "Nome" type="text" class="form-control" formControlName="nomeFuncionario" #nomeFuncionario>
         </div>
         <div *ngIf="funcionarioForm.controls['nomeFuncionario'].invalid
               && (funcionarioForm.controls['nomeFuncionario'].dirty
@@ -20,8 +20,8 @@
 
         <!-- INÍCIO BLOCO: Cargo/Profissão -->
         <div class="form-group">
-          <label>Cargo</label>
-          <input type="text" class="form-control" formControlName="cargo" #cargo>
+          <label></label>
+          <input placeholder="Cargo" type="text" class="form-control" formControlName="cargo" #cargo>
         </div>
         <div *ngIf="funcionarioForm.controls['cargo'].invalid
               && (funcionarioForm.controls['cargo'].dirty
@@ -35,8 +35,8 @@
 
         <!-- INÍCIO BLOCO: Nome do Número Identificador -->
         <div class="form-group">
-          <label>Número Identificador</label>
-          <input type="text" class="form-control" formControlName="numeroIdentificador" #numeroIdentificador>
+          <label></label>
+          <input placeholder = "Número da Matrícula" type="text" class="form-control" formControlName="numeroIdentificador" #numeroIdentificador>
         </div>
         <div *ngIf="funcionarioForm.controls['numeroIdentificador'].invalid
               && (funcionarioForm.controls['numeroIdentificador'].dirty
@@ -52,10 +52,9 @@
           <button (click)="adicionarFuncionario(nomeFuncionario.value, cargo.value, numeroIdentificador.value)"
             class="btn btn-primary"
             [disabled]="funcionarioForm.pristine || funcionarioForm.invalid">
-            <fa-icon [icon]="['fas','user-plus']"></fa-icon> Funcionário
+            <fa-icon [icon]="['fas','user-plus']"></fa-icon> Cadastrar
           </button>
         </div>
       </div>
     </form>
-  </div>
 </div>

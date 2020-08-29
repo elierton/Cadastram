@@ -1,0 +1,34 @@
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60vw; 
+    height: 50vh;
+    /*min-height: 34rem*/;
+}
+
+.logo {
+    height: 4rem; 
+    line-height: 4.6rem;
+    margin-top: 0.8rem;
+    max-width: 60vw;
+    /*margin-bottom: 50px; */
+        
+}
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 4px;
+    margin: 2px 8px 2px 8px;
+    max-width: 60vw;
+}
+
+.btn.btn-primary {
+    width: 100%;
+    margin-top: 16px;
+    
+   
+}
